@@ -1,0 +1,2 @@
+LOGINPASSWORD = "ipdL34838HefbwK"
+TPLINKIP = "http://192.168.2.1"

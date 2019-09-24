@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
+    <script src="{{ url_for('static',filename='js/login.js') }}"></script>
+
+{% endblock %}
+{% block body %}
+<div class="mdui-col-lg-2"></div>
+<div class="mdui-col-lg-8">
+    <div class="loginPage mdui-col-xs-12">
+        <form id="loginform">
+            <h1>计时器登录</h1>
+            <div class="mdui-textfield mdui-textfield-floating-label">
+                <label class="mdui-textfield-label">学号</label>
+                <input class="mdui-textfield-input" type="text" name="stdNumber" id="stdNumber"/>
+            </div>
+            <div class="mdui-textfield mdui-textfield-floating-label">
+                <label class="mdui-textfield-label">密码</label>
+                <input class="mdui-textfield-input" type="password" name="stdPassword" id="stdPassword"/>
+            </div>
+            <button type="button" onclick="login();" id="loginbtn" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-blue-600">登录</button>
+            <div id="loading" style="display: none">
+                <div id="result" style="display: none">认证成功 <span style="color: red">3</span>秒后跳转</div>
+                <div id="loading_icon" class="mdui-spinner mdui-spinner-colorful"></div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="mdui-col-lg-2"></div>
+{% endblock %}
